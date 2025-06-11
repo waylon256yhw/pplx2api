@@ -16,7 +16,7 @@ func main() {
 	// Setup all routes
 	router.SetupRoutes(r)
 	// 创建会话更新器，设置更新间隔为24小时
-	sessionUpdater := job.GetSessionUpdater(1 * time.Hour)
+	sessionUpdater := job.GetSessionUpdater(20 * time.Second)
 
 	// 启动会话更新器
 	sessionUpdater.Start()
